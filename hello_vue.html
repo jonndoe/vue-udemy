@@ -10,6 +10,9 @@
       {{ message }}
       <h1 v-text="message"></h1>
       <h3>{{ value * 3 }}</h3>
+      <img v-bind:src="imgSrc">
+      <a v-bind:href="link">Official Website</a>
+      <a :href="link">Official website v2</a>
   </div>
   <!-- development version, includes helpful console warnings -->
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
