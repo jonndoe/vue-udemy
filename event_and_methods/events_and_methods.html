@@ -14,11 +14,12 @@
 <body>
 
   <div id="app">
-      <h1>{{ lesson }}</h1>
+      <h1>Product: {{ product }}</h1>
+      <h2 v-if="quantity >= 20">Available</h2>
+      <h2 v-else-if="quantity > 0 && quantity < 20">Limited Availability</h2>
+      <h2 v-else >Sold out</h2>
       <br>
-      <h2>Counter : {{ counter }}</h2>
-      <button v-on:click="incrementCounter">Increment ++</button>
-      <div class="box" @mouseover="overTheBox"></div>
+      <h3 v-show="sale">On sale!!!</h3>
   </div>
 
 <!-- development version, includes helpful console warnings -->
